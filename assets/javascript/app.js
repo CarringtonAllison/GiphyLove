@@ -43,6 +43,7 @@ $("#resetButton").on("click", function(){
 })
 
 $("#header").on("click", function(){
-    console.log("working")
-    location.reload()
+    $("#gifGroup").empty();
+    $("#buttonGroup").empty();
+    
 })
