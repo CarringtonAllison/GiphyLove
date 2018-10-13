@@ -9,7 +9,8 @@ $("#createButton").on("click", function () {
 
 //  once the user created button is clicked it generates a giphy at the bottom of the page 
 $(document).on("click", ".btn-secondary", function () {
-    var forms = $("#inlineFormInput").val().trim();
+    console.log($(this).attr("data-name"))
+    var forms = $(this).attr("data-name");
     var userSearch = forms;
     var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=" + apiKey + "&limit=1";
     
