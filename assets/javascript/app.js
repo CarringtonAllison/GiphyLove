@@ -36,3 +36,13 @@ function renderButtons() {
     a.text($("#inlineFormInput").val().trim());
     $("#buttonGroup").append(a);
 }
+
+$("#resetButton").on("click", function(){
+    event.preventDefault();
+    $("#gifGroup").empty();
+})
+
+$("#header").on("click", function(){
+    console.log("working")
+    location.reload()
+})

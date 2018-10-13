@@ -1,11 +1,21 @@
+body {
+    background-image: url("https://media.giphy.com/media/bSHYJAbDSVUUo/giphy.gif");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #header {
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, .5);
     text-align: center;
     padding: 40px;
     border-radius: 30px;
-    font-size: 40px; 
-    margin: 15px;
+    margin: auto;
     margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: 'membra';
+    width: 100%;
 
 }
 
@@ -17,23 +27,28 @@
     bottom:0px;
     height:30px;
     width:100%;
-    background:#999;
+    background:rgba(255, 255, 255, .3);
+    border-top: 2px solid #d52780 
  }
 
 h1  {
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
+    color: #d52780;
 }
 
 #inlineFormInput {
     border-radius: 30px;
     text-align: center;
+    color: white;
+    background:rgba(213, 29, 128, .55);
+    border-color: black;
 }
 
 #createButton, #resetButton {
     border-radius: 30px;
-    background-color: gray;
-    
+    background: rgba(0, 0, 0, .5);
+    border-color: #d52780;
 }
 
 #gifImage {
@@ -41,14 +56,29 @@ h1  {
 }
 
 #buttonGroup {
-    display: table
+    display: table;
 }
 
 hr {
-    border-top: 5px solid rgba(0,0,0,.3);
+    border-top: 5px solid rgba(255,255,255,.5);
     padding: 6px;
 }
 .btn-secondary {
     margin-top: 5px;
-    border-radius: 0px; 
+    border-radius: 30px;
+    background: rgba(0, 0, 0, .3);
+    border-color: #d52780;
+
 }
+
+@font-face {
+    font-family: 'membra';
+    src: url(../images/membra\ copy.ttf)
+}
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 90px;
+    }
+    
+} 
