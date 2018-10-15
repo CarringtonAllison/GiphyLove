@@ -10,17 +10,17 @@ $("#createButton").on("click", function () {
 //  once the user created button is clicked it generates a giphy at the bottom of the page 
 $(document).on("click", ".btn-secondary", function () {
     console.log($(this).attr("data-name"))
-    var forms = $(this).attr("data-name");
-    var userSearch = forms;
-    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=" + apiKey + "&limit=1";
+    var userSearch = $(this).attr("data-name");
+    var queryUrl = "https://api.giphy.com/v1/gifs/random?api_key=" + apiKey + "&tag=" + userSearch +"";
     
     // the call to pull the giphy gif. files 
     $.ajax({
         url: queryUrl,
         method: "GET"
     }).then(function (response) {
+        console.log(response)
         //saves the gif
-        var results = response.data[0].images.fixed_height.url;
+        var results = response.data.images.fixed_height.url;
         console.log(results);
         var gifImage = $("<img id='gifImage'>");
         gifImage.attr("src", results);
@@ -28,6 +28,8 @@ $(document).on("click", ".btn-secondary", function () {
     });
 });
 
+
+// generates buttons with a data-name the same as what the user enters 
 function renderButtons() {
     var a = $("<button>");
     a.addClass("btn btn-secondary");
@@ -37,11 +39,15 @@ function renderButtons() {
     $("#buttonGroup").append(a);
 }
 
+
+// when the clear button is clicked it removed the gifs but not the buttons
 $("#resetButton").on("click", function(){
     event.preventDefault();
     $("#gifGroup").empty();
 })
 
+
+// when the header is clicked it removes all content
 $("#header").on("click", function(){
     $("#gifGroup").empty();
     $("#buttonGroup").empty();
