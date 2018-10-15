@@ -12,7 +12,7 @@ $(document).on("click", ".btn-secondary", function () {
     console.log($(this).attr("data-name"))
     var forms = $(this).attr("data-name");
     var userSearch = forms;
-    var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=" + apiKey + "&limit=1";
+    var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=" + apiKey + "&limit=1";
     
     // the call to pull the giphy gif. files 
     $.ajax({
