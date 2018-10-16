@@ -14,8 +14,10 @@ body {
     margin: auto;
     margin-bottom: 20px;
     margin-top: 10px;
-    font-family: 'membra';
+    font-family: 'tiki';
     width: 100%;
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: white;
 
 }
 
@@ -28,31 +30,39 @@ body {
     height:30px;
     width:100%;
     background:rgba(255, 255, 255, .3);
-    border-top: 2px solid #d52780 
+    border-top: 2px solid #60cca6 
  }
 
 h1  {
-    font-size: 28px;
+    font-size: 33px;
     text-align: center;
-    color: #d52780;
+    color: #60cca6;
 }
 
 #inlineFormInput {
     border-radius: 30px;
     text-align: center;
     color: white;
-    background:rgba(213, 29, 128, .55);
+    background:rgba(96, 204, 166, .55);
     border-color: black;
 }
 
 #createButton, #resetButton {
     border-radius: 30px;
     background: rgba(0, 0, 0, .5);
-    border-color: #d52780;
+    border-color: #60cca6;
 }
 
 #gifImage {
     margin: 5px;
+}
+
+.gif {
+    border: 2px solid #60cca6;
+    /* border-style: solid;
+    border-color: #60cca6; */
+    border-radius: .5rem;
+    box-shadow: 5px 15px 5px rgba(0, 0, 0, .3);
 }
 
 #buttonGroup {
@@ -67,18 +77,61 @@ hr {
     margin-top: 5px;
     border-radius: 30px;
     background: rgba(0, 0, 0, .3);
-    border-color: #d52780;
+    border-color: #60cca6;
 
+}
+
+#headline {
+    color: #ecfb3f;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'built';
+    margin-top: -25px;
+    margin-bottom: -15px;
+    -webkit-text-stroke-width: .6px;
+    -webkit-text-stroke-color: black;
 }
 
 @font-face {
-    font-family: 'membra';
-    src: url(../images/membra\ copy.ttf)
+    font-family: 'built';
+    src: url(../images/built\ titling\ lt.ttf)
+}
+
+@font-face {
+    font-family: 'tiki';
+    src: url(../images/Tiki\ Tropic\ copy.ttf)
 }
 
 @media only screen and (min-width: 600px) {
+    
     h1 {
-        font-size: 90px;
+        font-size: 51px;
+    }
+    
+    #headline {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    
+    h1 {
+        font-size: 73px;
+    }
+    
+    #headline  {
+        font-size: 33px;
+    }
+} 
+
+@media only screen and (min-width: 1200px) {
+    
+    h1 {
+        font-size: 98px;
+    }
+    
+    #headline  {
+        font-size: 33px;
     }
     
 } 
