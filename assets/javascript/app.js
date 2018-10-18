@@ -5,6 +5,7 @@ var apiKey = "4mth1euP7BKazZvxjk93SI1i15z91Spn";
 $("#createButton").on("click", function () {
     event.preventDefault(); //prevents page refresh
     renderButtons();
+    $("#inlineFormInput").val("")
 });
 
 //  once the user created button is clicked it generates a giphy at the bottom of the page 
@@ -32,6 +33,7 @@ $(document).on("click", ".btn-secondary", function () {
         gifImage.attr("data-state", "animated")
         $("#gifGroup").prepend(gifImage);
     });
+
 });
 
 // generates buttons with a data-name the same as what the user enters 
@@ -59,7 +61,7 @@ $("#header").on("click", function () {
 
 $(document).on("click", "#gifImage", function () {
     console.log($(this).attr("data-state"))
-
+    
     if ($(this).attr("data-state") === "animated") {
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still")
